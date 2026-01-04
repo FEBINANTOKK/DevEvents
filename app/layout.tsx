@@ -3,6 +3,7 @@ import { Schibsted_Grotesk,Martian_Mono } from "next/font/google";
 import "./globals.css";
 import LightRays from "@/components/LightRays";
 import Navbar from "@/components/Navbar";
+import { Providers } from './providers'
 
 const schibstedGrotesk = Schibsted_Grotesk({
   variable: "--font-schibsted_grotesk",
@@ -46,7 +47,7 @@ export default function RootLayout({
       </div>
 
 <main>
-    {children}
+    <Providers>{children}</Providers>
 </main>      </body>
     </html>
   );
