@@ -3,7 +3,7 @@ import {notFound} from "next/navigation";
 import {IEvent} from "@/database";
 import {getSimilarEventsBySlug} from "@/lib/actions/event.actions";
 import Image from "next/image";
-// import BookEvent from "@/components/BookEvent";
+import BookEvent from "@/components/BookEvent";
 import EventCard from "@/components/EventCard";
 import {cacheLife} from "next/cache";
 
@@ -121,7 +121,7 @@ const EventDetails = async ({ params }: { params: Promise<string> }) => {
                             <p className="text-sm">Be the first to book your spot!</p>
                         )}
 
-                        {/*<BookEvent eventId={event._id} slug={event.slug} />*/}
+                        <BookEvent eventId={event._id} slug={event.slug} />
                     </div>
                 </aside>
             </div>
